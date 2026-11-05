@@ -8,7 +8,9 @@ output:
 
 # Hello! Welcome To My Portfolio!
 
-![](Images/Headshot Helene copy.png)
+![](Images/Headshot Helene copy.png){width=300px}
+
+
 This is the introduction to my portfolio, hope you enjoy!
 
 
@@ -22,6 +24,6 @@ This is the introduction to my portfolio, hope you enjoy!
 
 ## Learn more about me
 
-[About Me](About Me.html)
+[About Me](about.html)
 
 
