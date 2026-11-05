@@ -1,0 +1,16 @@
+---
+title: "Helene's Portfolio Page"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: cerulean
+---
+
+# Hello! Welcome To My Portfolio!
+
+![](Images/Headshot Helene copy.png)
+This is the introduction to my portfolio, hope you enjoy!
+
+
+![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExc3ZsazZ0b2FreGF1cmtqd3U2bzl3dDhmc2lwenZjeDg5MnU3Zmx1NyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/K3Sbp8fOgKye4/giphy.gif)
