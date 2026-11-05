@@ -14,3 +14,9 @@ This is the introduction to my portfolio, hope you enjoy!
 
 
 ![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExc3ZsazZ0b2FreGF1cmtqd3U2bzl3dDhmc2lwenZjeDg5MnU3Zmx1NyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/K3Sbp8fOgKye4/giphy.gif)
+
+## Learn more about me
+
+[About Me](about me.html)
+
+

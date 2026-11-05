@@ -1,5 +1,5 @@
 ---
-title: "My awesome website"
+title: "About Me"
 output: 
   html_document:
     toc: true
@@ -7,6 +7,32 @@ output:
     theme: cerulean
 ---
 
-# This is Jeff's awesome website
+# Academic Experience
 
-![](https://media.giphy.com/media/drXGoW1iudhKw/giphy.gif)
+Columbia University - New York, NY
+Master of Public Health (MPH), Infectious Disease Epidemiology
+Aug 2025 - Present
+
+Johns Hopkins University - Baltimore, MD
+B.A Public Health Studies
+Dec 2023
+
+Millbrook School - Millbrook, NY
+High School Diploma - GPA: 4.0
+May 2019
+
+# Professional Experience
+
+ICAP at Columbia University, Harlem Prevention Center - New York, NY
+Next Generation Intern - Data Management & Community Outreach Intern for HIV and STI Prevention Clinical Trials
+August 2026 - Present
+
+Mathematics Tutor
+Mathnasium, New York, NY
+Jan 2026 - Present
+
+Clinical Laboratory Accesioner
+Medical Diagnostic Laboratories, L.L.C. (MDL), Trenton, NJ
+Jan 2025 - Aug 2025
+
+
