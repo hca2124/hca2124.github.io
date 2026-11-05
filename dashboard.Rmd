@@ -12,8 +12,11 @@ library(flexdashboard)
 library(tidyverse)
 library(p8105.datasets)
 library(plotly)
-library(flexdashboard)
 
+library(htmlwidgets)
+```
+
+```{r}
 data("ny_noaa")
 
 noaa_df =
@@ -27,7 +30,8 @@ noaa_df =
     tmin = as.numeric(tmin) / 10,) |>
   select(id, date, year, month, prcp, snow, tmax, tmin) |>
   filter(
-    year >= 2000,
+    year >= 2005,
+    id == "USW00094728",
     !is.na(tmax),
     !is.na(tmin))
 ```
@@ -35,7 +39,7 @@ noaa_df =
 Column {data-width=650}
 -----------------------------------------------------------------------
 
-### Chart A
+### Chart A - Max Temperature (C) in Central Park Station in Every Month
 
 ```{r}
 noaa_df |>
@@ -48,25 +52,26 @@ noaa_df |>
 Column {data-width=350}
 -----------------------------------------------------------------------
 
-### Chart B
+### Chart B - Snowfall (mm) in Central Park Station, 2005-2010
 
 ```{r}
 noaa_df |>
   filter(!is.na(snow), snow > 0) |>
   count(year) |>
-  plot_ly(x = ~year, y = ~n, color = ~year, type = "bar", colors = "viridis") |>
-  layout(yaxis = list(title = "Total Snowfall (mm)"),
-         xaxis = list(title = "Year"))
+  plot_ly(x = ~year, y = ~n, color = ~factor(year), type = "bar", colors = "viridis") |>
+  layout(yaxis = list(title = "Snowfall (mm)"),
+         xaxis = list(title = "Year"),
+         showlegend = FALSE)
 ```
 
-### Chart C
+### Chart C - Minimum vs Maximum Temp (C) in Central Park Station over Time (years)
 
 ```{r}
 noaa_df |>
   mutate(text_label = str_c("Date: ", date, "\nTmax: ", tmax, "C\nTmin: ", tmin, "C")) |>
-  plot_ly(x = ~tmin, y =~tmax, color = ~month, alpha = .5,
+  plot_ly(x = ~tmin, y =~tmax, color = ~month, text = ~text_label, alpha = .5,
           type = "scatter", mode = "markers") |>
   layout(yaxis = list(title = "Minimum Temp (C)"),
-         xasis = list(title = "Maximum Temp (C)"))
+         xaxis = list(title = "Maximum Temp (C)"))
 ```
 

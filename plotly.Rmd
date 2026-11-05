@@ -27,7 +27,8 @@ noaa_df =
     tmin = as.numeric(tmin) / 10,) |>
   select(id, date, year, month, prcp, snow, tmax, tmin) |>
   filter(
-    year >= 2000,
+    year >= 2005,
+    id == "USW00094728",
     !is.na(tmax),
     !is.na(tmin))
 ```
@@ -49,7 +50,7 @@ noaa_df |>
   filter(!is.na(snow), snow > 0) |>
   count(year) |>
   plot_ly(x = ~year, y = ~n, color = ~year, type = "bar", colors = "viridis") |>
-  layout(yaxis = list(title = "Total Snowfall (mm)"),
+  layout(yaxis = list(title = "Snowfall (mm)"),
          xaxis = list(title = "Year"))
 ```
 
