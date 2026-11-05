@@ -1,0 +1,66 @@
+---
+title: "Plotly"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+# Plotly Plots
+
+```{r}
+library(tidyverse)
+library(p8105.datasets)
+library(plotly)
+library(flexdashboard)
+```
+```{r}
+data("ny_noaa")
+
+noaa_df =
+  ny_noaa |>
+  mutate(
+    year = year(date),
+    month = month(date, label = TRUE),
+    day = day(date),
+    prcp = prcp / 10,
+    tmax = as.numeric(tmax) / 10,
+    tmin = as.numeric(tmin) / 10,) |>
+  select(id, date, year, month, prcp, snow, tmax, tmin) |>
+  filter(
+    year >= 2000,
+    !is.na(tmax),
+    !is.na(tmin))
+```
+
+## Chart A - Boxplot
+
+```{r}
+noaa_df |>
+  plot_ly(
+    y = ~tmax, x = ~month, color = ~month, type = "box", colors = "viridis") |>
+  layout(yaxis = list(title = "Maximum Temperature (C)"),
+         xaxis = list(title = "Month"))
+```
+
+## Chart B - Bar Plot
+
+```{r}
+noaa_df |>
+  filter(!is.na(snow), snow > 0) |>
+  count(year) |>
+  plot_ly(x = ~year, y = ~n, color = ~year, type = "bar", colors = "viridis") |>
+  layout(yaxis = list(title = "Total Snowfall (mm)"),
+         xaxis = list(title = "Year"))
+```
+
+## Chart C - Scatterplot
+
+```{r}
+noaa_df |>
+  mutate(text_label = str_c("Date: ", date, "\nTmax: ", tmax, "C\nTmin: ", tmin, "C")) |>
+  plot_ly(x = ~tmin, y =~tmax, color = ~month, alpha = .5,
+          type = "scatter", mode = "markers") |>
+  layout(yaxis = list(title = "Minimum Temp (C)"),
+         xasis = list(title = "Maximum Temp (C)"))
+```
+
