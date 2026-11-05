@@ -4,7 +4,6 @@ output:
   html_document:
     toc: true
     toc_float: true
-    theme: cerulean
 ---
 
 # Academic Experience
@@ -34,5 +33,7 @@ Jan 2026 - Present
 Clinical Laboratory Accesioner
 Medical Diagnostic Laboratories, L.L.C. (MDL), Trenton, NJ
 Jan 2025 - Aug 2025
+
+
 
 

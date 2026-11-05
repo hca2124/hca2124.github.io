@@ -4,7 +4,6 @@ output:
   html_document:
     toc: true
     toc_float: true
-    theme: cerulean
 ---
 
 # Hello! Welcome To My Portfolio!
@@ -13,10 +12,16 @@ output:
 This is the introduction to my portfolio, hope you enjoy!
 
 
+## Links
+
+* [GitHub account](https://github.com/hca2124)
+* [Email](mailto:<hca2124@cumc.columbia.edu.com>)
+* [LinkedIn](https://www.linkedin.com/in/helene-a-07b471176/)
+
 ![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExc3ZsazZ0b2FreGF1cmtqd3U2bzl3dDhmc2lwenZjeDg5MnU3Zmx1NyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/K3Sbp8fOgKye4/giphy.gif)
 
 ## Learn more about me
 
-[About Me](about me.html)
+[About Me](About Me.html)
 
 
